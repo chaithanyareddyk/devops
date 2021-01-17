@@ -1,0 +1,10 @@
+---
+- name: Deploying appliation to tomcat
+  hosts: all
+  become: true
+  
+  tasks:
+  - name: Copying the war file to tomcat webapps folder
+    copy:
+      src: /opt/playbooks/devops-demo.war
+      dest: /opt/tomcat/latest/webapps
