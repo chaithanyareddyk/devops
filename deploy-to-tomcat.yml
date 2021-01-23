@@ -5,6 +5,5 @@
   
   tasks:
   - name: Copying the war file to tomcat webapps folder
-    copy:
-      src: /opt/playbooks/devops-demo.war
-      dest: /opt/tomcat/latest/webapps
+    shell: "./tomcat-containercreation.sh"
+
